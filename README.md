@@ -6,3 +6,6 @@ Run the following commands:
 npm install
 npm run serve
 ```
+
+Run this on your local.
+http://localhost:8080/
