@@ -1,19 +1,25 @@
 <template>
-  <div class="wellness-plan">
-    <div class="wellness-plan-header">
-      <div class="header-first">
-        <h1>Your Progress</h1>
-        <h3>3 steps to complete</h3>
+  <div class="wellness-plan-wrapper">
+    <h1>2021 Wellness Plan</h1>
+    <div class="wellness-plan">
+      <div class="wellness-plan-header">
+        <div class="header-first">
+          <h1>Your Progress</h1>
+          <h3>3 steps to complete</h3>
+        </div>
+        <span class="hide">hide</span>
       </div>
-      <span class="hide">hide</span>
-    </div>
-    <div class="wellness-plan-content">
-      <div class="left">
-        <wellness-progress :percent="68" start-color="#61b057" stop-color="#add2e0" inner-stroke-color="#f1f2f3" />
-        <span class="progress-label">Completed appointments</span>
-      </div>
-      <div class="right">
-        <monthly-view />
+      <div class="wellness-plan-content">
+        <div class="left">
+          <wellness-progress :percent="68" start-color="#61b057" stop-color="#add2e0" inner-stroke-color="#f1f2f3" />
+          <span class="progress-label">Completed appointments</span>
+        </div>
+        <div class="right">
+          <monthly-view :taskList="tasks" />
+          <div class="task-list">
+            <task-status-bar v-for="task in tasks" :key="task.id" :task="task" />
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -22,22 +28,31 @@
 <script>
 import WellnessProgress from "../components/WellnessProgress.vue";
 import MonthlyView from "../components/MonthlyView.vue";
+import TaskStatusBar from "../components/TaskStatusBar.vue";
+import { TaskList } from "../data";
 
 export default {
   name: "WellnessPlan",
   components: {
     WellnessProgress,
-    MonthlyView
-  }
+    MonthlyView,
+    TaskStatusBar
+  },
+  data: () => ({
+    tasks: TaskList
+  })
 };
 </script>
 
 <style scoped>
+.wellness-plan-wrapper {
+  margin: 3rem;
+}
+
 .wellness-plan {
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 16px;
   border: 1px solid #dddddd;
-  margin: 3rem;
 }
 
 .wellness-plan-header {
@@ -76,7 +91,7 @@ export default {
 .wellness-plan-content .left {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -86,5 +101,12 @@ export default {
   margin-top: 2rem;
   font-size: 20px;
   color: #808080;
+}
+
+.task-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  margin-top: 2rem;
 }
 </style>

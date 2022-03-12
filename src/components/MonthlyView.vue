@@ -9,8 +9,6 @@
 <script>
 import StatusInMonth from "./StatusInMonth.vue";
 
-import { TaskList } from "../data";
-
 const MONTHS = [
   "Jan",
   "Feb",
@@ -31,6 +29,9 @@ export default {
   components: {
     StatusInMonth
   },
+  props: {
+    taskList: Array
+  },
   data: () => ({
     months: MONTHS,
     tasks: []
@@ -43,12 +44,12 @@ export default {
     ];
 
     const filteredTasks = [...Array(12).keys()].map(mon =>
-      TaskList.filter(task => task.date.getMonth() === mon)
+      this.taskList.filter(task => task.date.getMonth() === mon)
     );
     this.tasks = [
       ...filteredTasks.slice(currentDate.getMonth()),
       ...filteredTasks.slice(0, currentDate.getMonth())
-    ]
+    ];
   }
 };
 </script>
