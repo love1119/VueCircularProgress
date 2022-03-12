@@ -1,0 +1,21 @@
+{
+  "name": "vuejs-starter",
+  "version": "1.2.0",
+  "description": "Vue.js starter project",
+  "license": "Apache-2.0",
+  "author": "",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build"
+  },
+  "dependencies": {
+    "vue": "^2.5.16",
+    "vue-radial-progress": "^0.3.2",
+    "vue-router": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.0.0-rc.5",
+    "@vue/cli-service": "^3.0.0-rc.5",
+    "vue-template-compiler": "^2.5.16"
+  }
+}
