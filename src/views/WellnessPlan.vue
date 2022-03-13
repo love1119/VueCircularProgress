@@ -115,4 +115,36 @@ export default {
   gap: 0.5rem;
   margin-top: 2rem;
 }
+
+@media only screen and (max-width: 1024px) {
+  .wellness-plan-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .wellness-plan {
+    padding: 0;
+    border: none;
+  }
+
+  .wellness-plan-content {
+    padding: 1rem 0 0 0;
+  }
+
+  .wellness-plan-wrapper {
+    margin: 1rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .header-first {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header-first > h3 {
+    margin-left: 0;
+  }
+}
 </style>

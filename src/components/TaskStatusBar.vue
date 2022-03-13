@@ -97,11 +97,16 @@ export default {
   align-items: center;
   justify-content: space-between;
   padding: 0 1rem;
+  overflow: hidden;
 }
 
 .task-status-bar-label {
   font-size: 18px;
   font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-right: 3rem;
 }
 
 .task-status-bar-actions {
@@ -109,6 +114,12 @@ export default {
   justify-content: space-between;
   align-items: center;
   width: 200px;
+  min-width: 200px;
+}
+
+.task-status-bar-actions-left {
+  display: flex;
+  align-items: center;
 }
 
 .task-status-bar-actions-left > span {
