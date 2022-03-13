@@ -10,11 +10,15 @@ export default new Router({
   routes: [
     {
       path: '/',
-      component: Tutorial
+      redirect: '/plan'
     },
     {
       path: '/plan',
       component: WellnessPlan
+    },
+    {
+      path: '/example',
+      component: Tutorial
     },
   ]
 })
