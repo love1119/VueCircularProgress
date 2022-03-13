@@ -38,6 +38,7 @@ export default {
 .status-month-label {
   color: #13599e;
   font-size: 16px;
+  font-weight: 600;
 }
 
 .status-month-list {

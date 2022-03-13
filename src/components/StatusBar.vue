@@ -33,6 +33,6 @@ export default {
   height: 5px;
   border-radius: 3px;
   min-height: 5px;
-  max-width: 70px;
+  max-width: 64px;
 }
 </style>

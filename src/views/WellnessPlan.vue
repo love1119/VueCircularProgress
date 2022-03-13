@@ -1,6 +1,6 @@
 <template>
   <div class="wellness-plan-wrapper">
-    <h1>2021 Wellness Plan</h1>
+    <h1 class="wellness-plan-wrapper-title">2021 Wellness Plan</h1>
     <div class="wellness-plan">
       <div class="wellness-plan-header">
         <div class="header-first">
@@ -49,6 +49,10 @@ export default {
   margin: 3rem;
 }
 
+.wellness-plan-wrapper-title {
+  font-size: 48px;
+}
+
 .wellness-plan {
   padding: 2rem;
   border-radius: 16px;
@@ -64,6 +68,7 @@ export default {
 .wellness-plan-header .hide {
   font-size: 20px;
   text-decoration: underline;
+  color: #4a4d52;
 }
 
 .header-first {
@@ -96,11 +101,12 @@ export default {
 }
 
 .wellness-plan-content .progress-label {
-  width: 100px;
+  width: 130px;
   text-align: center;
   margin-top: 2rem;
-  font-size: 20px;
-  color: #808080;
+  font-size: 18px;
+  color: #323c47;
+  font-weight: 600;
 }
 
 .task-list {
