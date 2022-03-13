@@ -9,3 +9,7 @@ npm run serve
 
 Run this on your local.
 http://localhost:8080/
+
+Available pages:
+http://localhost:8080/plan
+http://localhost:8080/example
