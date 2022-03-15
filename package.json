@@ -4,6 +4,9 @@
   "description": "Vue.js starter project",
   "license": "Apache-2.0",
   "author": "",
+  "engines": {
+    "node": "14.17.1"
+  },
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
